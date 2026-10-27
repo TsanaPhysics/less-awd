@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "total_hardware_min": 3030,
+    "total_hardware_typical": 3630,
+    "total_hardware_max": 5010,
+    "total_commercial_min": 7500,
+    "total_commercial_typical": 8500,
+    "total_commercial_max": 10000,
+    "saving_amount_min": 4470,
+    "saving_amount_typical": 4870,
+    "saving_amount_max": 4990,
+    "saving_percent_typical": 57.29,
+    "note": "ราคาจริงของชิ้นส่วนฮาร์ดแวร์ในประเทศไทย รวมจอแสดงผล LCD I2C หน้าตู้ ไม่รวมค่า Cloud Server, ฐานข้อมูล, และค่าพัฒนาแอปพลิเคชันสมาร์ทโฟน"
+  },
+  "exclusions_scope": {
+    "disclaimer": "การประเมินราคาข้างต้นเป็นเฉพาะต้นทุนวัสดุและอุปกรณ์ฮาร์ดแวร์สนาม (Hardware & Field Components Only) ไม่ได้รวมค่าใช้จ่ายด้านซอฟต์แวร์ เซิร์ฟเวอร์ และการพัฒนาแอปพลิเคชัน",
+    "excluded_items": [
+      {
+        "item": "ค่าบริการ Cloud Server & Hosting",
+        "description": "เซิร์ฟเวอร์รับส่งข้อมูลโทรมาตร, MQTT Broker, VPS Cloud Host สำหรับออนไลน์ข้ามจังหวัด",
+        "cost_type": "รายเดือน/รายปี หรือจัดสรรงบแยกต่างหาก"
+      },
+      {
+        "item": "ค่าพัฒนาระบบฐานข้อมูล (Database System)",
+        "description": "ระบบจัดเก็บข้อมูล Time-Series (MySQL/InfluxDB/PostgreSQL) สำหรับการประมวลผลคาร์บอนเครดิตระยะยาว",
+        "cost_type": "ค่าสถาปัตยกรรมระบบ & พื้นที่จัดเก็บ"
+      },
+      {
+        "item": "ค่าพัฒนาและบำรุงรักษาแอปพลิเคชัน (Mobile App)",
+        "description": "การออกแบบ UI/UX, เขียนโค้ดแอปสมาร์ทโฟน Android/iOS, และการอัปเดตระบบซอฟต์แวร์",
+        "cost_type": "ค่าพัฒนาซอฟต์แวร์ (Software Engineering)"
+      },
+      {
+        "item": "ค่าบริการซิมการ์ด 4G Cellular (SIM Data Plan)",
+        "description": "ค่าอินเทอร์เน็ตซิม IoT สำหรับพื้นที่แปลงนาที่ไม่มีสัญญาณ WiFi",
+        "cost_type": "ประมาณ 30 - 50 บาท/เดือน (300 - 600 บาท/ปี)"
+      }
+    ],
+    "no_server_alternative": "เกษตรกรสามารถเลือกใช้งานโหมด 'Local BLE / WiFi Direct' เพื่อเชื่อมต่อกับสมาร์ทโฟนในระยะ 10-30 เมตรได้โดยตรงโดยไม่ต้องมี Server, ฐานข้อมูล หรือซิมอินเทอร์เน็ต ซึ่งจะไม่มีค่าใช้จ่ายรายเดือนเพิ่มเติม"
+  },
+  "categories": [
+    {
+      "id": "sensor",
+      "name": "1. ระบบเซนเซอร์และท่อวัดระดับน้ำ",
+      "icon": "fa-water",
+      "color": "cyan",
+      "items": [
+        {
+          "name": "เซนเซอร์วัดระดับน้ำอัลตราโซนิกกันน้ำ AJ-SR04M / JSN-SR04T V3.0",
+          "image": "assets/images/bom/bom_sensor_ajsr04m.jpg",
+          "spec": "ระยะตรวจวัด 20 - 450 cm, กันน้ำมาตรฐาน IP67, หัวโพรบพร้อมสาย 2.5m, ไฟเลี้ยง 3.0-5.5V",
+          "qty": "1 ชุด",
+          "price_min": 220,
+          "price_max": 350,
+          "price_typical": 280,
+          "supplier": "ArtronShop / AllNewStep / Shopee",
+          "url": "https://www.artronshop.co.th",
+          "notes": "โพรบกันละอองน้ำและความชื้น เหมาะสำหรับติดตั้งในท่อ PVC สังเกตการณ์กลางแจ้ง"
+        },
+        {
+          "name": "ท่อ PVC ตราช้าง/ท่อน้ำไทย ขนาด 4 นิ้ว (ชั้น 8.5) ยาว 1.0 เมตร",
+          "image": "assets/images/bom/bom_pvc_pipe.jpg",
+          "spec": "เจาะรูกลมเส้นผ่านศูนย์กลาง 5-8 mm รอบท่อห่างกัน 5 cm ในช่วง 40 cm ด้านล่าง",
+          "qty": "1 ท่อน",
+          "price_min": 110,
+          "price_max": 160,
+          "price_typical": 140,
+          "supplier": "ไทวัสดุ / โฮมโปร / ร้านวัสดุก่อสร้างท้องถิ่น",
+          "url": "https://www.thaiwatsadu.com",
+          "notes": "ท่อสังเกตการณ์ (Observation Well) ฝังลึกลงดิน 20-25 cm โผล่เหนือน้ำ 20 cm"
+        },
+        {
+          "name": "ฝาครอบ PVC ขนาด 4 นิ้ว (พร้อมช่องยึดโพรบ) และตาข่ายไนลอน",
+          "image": "assets/images/bom/bom_pvc_cap.jpg",
+          "spec": "ฝาครอบ PVC 4 นิ้ว 2 ชิ้น (บน-ล่าง) + มุ้งไนลอนกันโคลนและเศษวัชพืช",
+          "qty": "1 ชุด",
+          "price_min": 70,
+          "price_max": 120,
+          "price_typical": 90,
+          "supplier": "ไทวัสดุ / ร้านเกษตรชุมชน",
+          "url": "https://www.thaiwatsadu.com",
+          "notes": "หุ้มตาข่ายไนลอนส่วนที่เจาะรูเพื่อให้น้ำไหลซึมสะดวกโดยโคลนไม่เข้าอุดตัน"
+        }
+      ]
+    },
+    {
+      "id": "mcu",
+      "name": "2. บอร์ดควบคุม จอแสดงผล และการสื่อสาร",
+      "icon": "fa-microchip",
+      "color": "emerald",
+      "items": [
+        {
+          "name": "บอร์ดไมโครคอนโทรลเลอร์ ESP32 NodeMCU / ESP32-S3 (Type-C)",
+          "image": "assets/images/bom/bom_esp32_mcu.jpg",
+          "spec": "Dual-Core 240MHz, 4-16MB Flash, 520KB SRAM, WiFi + BLE 4.2/5.0",
+          "qty": "1 บอร์ด",
+          "price_min": 140,
+          "price_max": 250,
+          "price_typical": 160,
+          "supplier": "ArtronShop / ThaiEasyElec",
+          "url": "https://www.artronshop.co.th",
+          "notes": "รองรับเฟิร์มแวร์ HandySense Open Source และ Deep Sleep ประหยัดพลังงาน"
+        },
+        {
+          "name": "จอแสดงผล LCD 20x4 I2C Character Display (หรือ จอแสดงผลสี 3.5\" TFT)",
+          "image": "assets/images/bom/bom_display_screen.jpg",
+          "spec": "จอ LCD 20 ตัวอักษร x 4 บรรทัด พร้อมโมดูล I2C Backpack 4 พิน (VCC, GND, SDA, SCL) ไฟแบ็คไลท์ปรับได้",
+          "qty": "1 ชุด",
+          "price_min": 140,
+          "price_max": 280,
+          "price_typical": 190,
+          "supplier": "ArtronShop / AllNewStep / ThaiEasyElec",
+          "url": "https://www.artronshop.co.th",
+          "notes": "แสดงระดับน้ำ (cm), สถานะวาล์ว, แบตเตอรี่ และสัญญาณ 4G หน้าตู้ทันที พร้อมระบบพักหน้าจออัตโนมัติ (Auto-Sleep 30s)"
+        },
+        {
+          "name": "โมดูลสื่อสาร 4G LTE A7670E / SIM7600E (พร้อมเสาอากาศ SMA)",
+          "image": "assets/images/bom/bom_4g_a7670e.jpg",
+          "spec": "รองรับ 4G LTE-FDD/TDD ทุกค่ายในไทย (AIS, True/Dtac), UART Interface",
+          "qty": "1 ชุด",
+          "price_min": 550,
+          "price_max": 790,
+          "price_typical": 650,
+          "supplier": "ThaiEasyElec / Cybertice / AllNewStep",
+          "url": "https://www.thaieasyelec.com",
+          "notes": "ส่งข้อมูลขึ้น HandySense Cloud / LEQs Server แม้แปลงนาไร้ WiFi (หากมี WiFi สามารถตัดรายการนี้ได้)"
+        },
+        {
+          "name": "โมดูลโซลิดสเตทรีเลย์ / Relay Module 1-Channel 12V Optocoupler",
+          "image": "assets/images/bom/bom_relay_12v.jpg",
+          "spec": "แยกกราวด์ Optocoupler ป้องกันสัญญาณกวน, ทนกระแส 10A 250VAC / 30VDC",
+          "qty": "1 ตัว",
+          "price_min": 45,
+          "price_max": 80,
+          "price_typical": 60,
+          "supplier": "AllNewStep / ArtronShop",
+          "url": "https://www.allnewstep.com",
+          "notes": "ใช้สั่งเปิด-ปิดโซลินอยด์วาล์วปล่อยน้ำเข้าแปลงนาโดยอัตโนมัติ"
+        },
+        {
+          "name": "แผ่นวงจรพิมพ์อเนกประสงค์ (Custom PCB) และเทอร์มินัลบล็อก",
+          "image": "assets/images/bom/bom_terminal_pcb.jpg",
+          "spec": "Screw Terminal Pitch 5.08mm, ตัวต้านทาน Pull-up, ไดโอดป้องกันไฟย้อน",
+          "qty": "1 ชุด",
+          "price_min": 60,
+          "price_max": 120,
+          "price_typical": 80,
+          "supplier": "ArtronShop / AllNewStep",
+          "url": "https://www.artronshop.co.th",
+          "notes": "จัดเก็บสายสัญญาณให้เป็นระเบียบ ทนต่อแรงสั่นสะเทือนและความชื้น"
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "name": "3. ระบบพลังงานแสงอาทิตย์และสำรองไฟ (Solar & Battery)",
+      "icon": "fa-solar-panel",
+      "color": "amber",
+      "items": [
+        {
+          "name": "แผงโซลาร์เซลล์ Monocrystalline 10W - 20W 18V (อลูมิเนียมกันน้ำ)",
+          "image": "assets/images/bom/bom_solar_panel.jpg",
+          "spec": "Max Power 10-20W, Vmp 18.2V, ขอบอลูมิเนียมอะโนไดซ์ทนทานกลางแจ้ง",
+          "qty": "1 แผง",
+          "price_min": 350,
+          "price_max": 590,
+          "price_typical": 490,
+          "supplier": "ไทวัสดุ / อมร อีเล็คโทรนิคส์ / Shopee Mall",
+          "url": "https://www.thaiwatsadu.com",
+          "notes": "ผลิตไฟได้เพียงพอแม้วันที่มีเมฆมาก เลี้ยงระบบได้ตลอด 24 ชั่วโมง"
+        },
+        {
+          "name": "โมดูลควบคุมการชาร์จ Solar Charge Controller 12V/24V 10A",
+          "image": "assets/images/bom/bom_solar_controller.jpg",
+          "spec": "หน้าจอแสดงแรงดัน, ป้องกันไฟย้อน, ป้องกันแบตเตอรี่โอเวอร์ชาร์จ",
+          "qty": "1 ตัว",
+          "price_min": 130,
+          "price_max": 260,
+          "price_typical": 180,
+          "supplier": "AllNewStep / ThaiEasyElec",
+          "url": "https://www.allnewstep.com",
+          "notes": "ชาร์จแบตเตอรี่อย่างมีประสิทธิภาพและตัดการจ่ายไฟเมื่อแบตเตอรี่ต่ำ"
+        },
+        {
+          "name": "แบตเตอรี่ลิเธียมฟอสเฟต LiFePO4 12V 4Ah - 6Ah พร้อม BMS ในตัว",
+          "image": "assets/images/bom/bom_battery_lifepo4.jpg",
+          "spec": "รอบการชาร์จ >2,000 Cycle, ทนความร้อน ปลอดภัย ไม่ระเบิด, BMS ตัดไฟอัตโนมัติ",
+          "qty": "1 ลูก",
+          "price_min": 450,
+          "price_max": 750,
+          "price_typical": 550,
+          "supplier": "ThaiEasyElec / AllNewStep",
+          "url": "https://www.thaieasyelec.com",
+          "notes": "สำรองไฟเลี้ยงระบบได้ต่อเนื่อง 3-5 วันแม้ไม่มีแดด (น้ำหนักเบา อายุใช้งาน 5-8 ปี)"
+        },
+        {
+          "name": "โมดูลแปลงไฟ Step-Down DC-DC Buck Converter (12V to 5V 3A)",
+          "image": "assets/images/bom/bom_buck_converter.jpg",
+          "spec": "LM2596 / MP1584 จ่ายไฟนิ่ง 5.0V ให้บอร์ด ESP32 และเซนเซอร์",
+          "qty": "1 ตัว",
+          "price_min": 35,
+          "price_max": 70,
+          "price_typical": 50,
+          "supplier": "ArtronShop / AllNewStep",
+          "url": "https://www.artronshop.co.th",
+          "notes": "ประสิทธิภาพการแปลงพลังงานสูง >92% ลดความร้อนสะสมในตู้คอนโทรล"
+        }
+      ]
+    },
+    {
+      "id": "enclosure",
+      "name": "4. กล่องตู้กันน้ำ วาล์วไฟฟ้า และอุปกรณ์ติดตั้งสนาม",
+      "icon": "fa-box-open",
+      "color": "blue",
+      "items": [
+        {
+          "name": "กล่องกันน้ำพลาสติก ABS/PC ฝาใส (Clear Cover) มาตรฐาน IP65",
+          "image": "assets/images/bom/bom_ip65_box.jpg",
+          "spec": "ฝาใสโพลีคาร์บอเนต มองเห็นจอแสดงผล LCD จากภายนอกได้ทันที ขนาด 150x200x100 mm พร้อมซีลยางกันน้ำและเคเบิ้ลแกลนด์ PG7/PG9",
+          "qty": "1 กล่อง",
+          "price_min": 190,
+          "price_max": 320,
+          "price_typical": 250,
+          "supplier": "ไทวัสดุ / โฮมโปร / ArtronShop",
+          "url": "https://www.thaiwatsadu.com",
+          "notes": "รุ่นฝาใสช่วยให้อ่านค่าระดับน้ำได้ทันทีโดยไม่ต้องเปิดฝากล่องตากแดดตากฝน ป้องกันความชื้นและฝุ่นละอองเข้าแผงวงจร"
+        },
+        {
+          "name": "โซลินอยด์วาล์ว 1 นิ้ว 12VDC ชนิดปกติปิด (NC) (พลาสติกไนลอน/ทองเหลือง)",
+          "image": "assets/images/bom/bom_solenoid_valve.jpg",
+          "spec": "ขดลวด 12VDC, ทนแรงดันน้ำ 0.5-8 บาร์, อัตราไหลสูงสำหรับงานเกษตร",
+          "qty": "1 ตัว",
+          "price_min": 380,
+          "price_max": 620,
+          "price_typical": 480,
+          "supplier": "ไทวัสดุ / ร้านอุปกรณ์การเกษตร",
+          "url": "https://www.thaiwatsadu.com",
+          "notes": "ติดตั้งที่ท่อน้ำเข้าแปลงนา สั่งเปิดน้ำอัตโนมัติเมื่อระดับน้ำลดต่ำกว่าเกณฑ์ -15 cm"
+        },
+        {
+          "name": "เสาเหล็กกัลวาไนซ์ 1 นิ้ว พร้อมแคลมป์ยึดและสายสัญญาณสนาม",
+          "image": "assets/images/bom/bom_pole.jpg",
+          "spec": "เสาเหล็กกันสนิมยาว 1.5 m + แคลมป์รัดท่อ PVC + สายชีลด์กันสัญญาณรบกวน",
+          "qty": "1 ชุด",
+          "price_min": 160,
+          "price_max": 250,
+          "price_typical": 210,
+          "supplier": "ไทวัสดุ / ร้านเหล็กท้องถิ่น",
+          "url": "https://www.thaiwatsadu.com",
+          "notes": "ปักข้างคันนา แข็งแรง ทนทานต่อลมพายุและการทำงานของรถเกี่ยวข้าว"
+        }
+      ]
+    }
+  ]
+}
